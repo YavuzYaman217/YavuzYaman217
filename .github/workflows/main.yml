@@ -1,0 +1,125 @@
+name: 🌌 Star Collector Game
+
+on:
+  push:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  star-game:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: 🎮 Star Collection Challenge
+      run: |
+        echo "================================"
+        echo "    🌌 STAR COLLECTOR GAME 🌌"
+        echo "================================"
+        echo ""
+        
+        # Random star field generator
+        stars=("⭐" "🌟" "✨" "💫" "🌠")
+        obstacles=("☄️" "🌑" "🕳️")
+        
+        echo "🚀 Launching spacecraft..."
+        sleep 1
+        
+        # Game board
+        for i in {1..5}; do
+          line=""
+          for j in {1..10}; do
+            rand=$((RANDOM % 10))
+            if [ $rand -lt 6 ]; then
+              line+="${stars[$((RANDOM % 5))]} "
+            elif [ $rand -lt 8 ]; then
+              line+="${obstacles[$((RANDOM % 3))]} "
+            else
+              line+="  "
+            fi
+          done
+          echo "$line"
+        done
+        
+        echo ""
+        echo "🎯 Mission: Collect all stars!"
+        
+        # Calculate score
+        python_files=$(find . -name "*.py" 2>/dev/null | wc -l)
+        commits=$(git rev-list --count HEAD 2>/dev/null || echo 0)
+        esp32_score=$((RANDOM % 100))
+        
+        total_score=$((python_files * 10 + commits * 5 + esp32_score))
+        
+        echo ""
+        echo "📊 SCORE BREAKDOWN:"
+        echo "  🐍 Python Files: $python_files x 10 = $((python_files * 10)) points"
+        echo "  📝 Commits: $commits x 5 = $((commits * 5)) points"
+        echo "  🛰️ ESP32 Bonus: $esp32_score points"
+        echo ""
+        echo "🏆 TOTAL SCORE: $total_score points!"
+        
+        # Achievement system
+        if [ $total_score -lt 100 ]; then
+          echo "🥉 Achievement: Rookie Star Hunter"
+        elif [ $total_score -lt 500 ]; then
+          echo "🥈 Achievement: Stellar Navigator"
+        elif [ $total_score -lt 1000 ]; then
+          echo "🥇 Achievement: Galaxy Explorer"
+        else
+          echo "💎 Achievement: COSMIC LEGEND!"
+        fi
+        
+    - name: 🎲 Daily Space Challenge
+      run: |
+        echo ""
+        echo "================================"
+        echo "   🎲 DAILY SPACE CHALLENGE"
+        echo "================================"
+        
+        challenges=(
+          "🔭 Discover a new algorithm today!"
+          "🛰️ Add ESP32 sensor integration!"
+          "🤖 Train a neural network!"
+          "⭐ Optimize your star classifier!"
+          "🚀 Deploy your latest project!"
+          "🌌 Document your astronomical code!"
+          "💫 Refactor for better performance!"
+        )
+        
+        day_of_year=$(date +%j)
+        challenge_idx=$((day_of_year % 7))
+        
+        echo ""
+        echo "TODAY'S CHALLENGE:"
+        echo "${challenges[$challenge_idx]}"
+        echo ""
+        
+        # Fun fact
+        facts=(
+          "💡 A neutron star is so dense, a teaspoon weighs 6 billion tons!"
+          "🌍 Light from the Sun takes 8 minutes to reach Earth!"
+          "🪐 Saturn's rings are made of ice and rock particles!"
+          "🌙 One side of the Moon always faces Earth!"
+          "☀️ The Sun is 400 times larger than the Moon!"
+          "🔴 Mars has the largest volcano in our solar system!"
+          "⚡ Jupiter's Great Red Spot is a storm larger than Earth!"
+        )
+        
+        echo "🌟 SPACE FACT OF THE DAY:"
+        echo "${facts[$((day_of_year % 7))]}"
+        
+    - name: 🏁 Game Summary
+      run: |
+        echo ""
+        echo "================================"
+        echo "      🏁 MISSION COMPLETE!"
+        echo "================================"
+        echo ""
+        echo "Astronaut: ${{ github.actor }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Branch: ${{ github.ref_name }}"
+        echo ""
+        echo "🎊 Keep coding and reach for the stars! 🚀"
