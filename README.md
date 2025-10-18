@@ -8,7 +8,7 @@
 
 ## 🚀 About Me
 
-AI Engineer and Full Stack Developer passionate about programming for **10 years**. Started with game development in 2015, evolved into AI/ML research, and currently exploring **ESP32** and **embedded systems**.
+AI Engineer and Full Stack Developer passionate about programming for **10 years**. Started with **game development in 2015** (Unity & Godot), evolved into AI/ML research, and currently exploring **ESP32** and **embedded systems**.
 
 **Current Focus:** ⭐ Star classification using machine learning and ESP32-based astronomical instruments.
 
@@ -18,9 +18,15 @@ AI Engineer and Full Stack Developer passionate about programming for **10 years
 
 ### Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)
+![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+
+### Game Development
+![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
+![Godot](https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white)
 
 ### AI/ML & Data Science
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -34,6 +40,12 @@ AI Engineer and Full Stack Developer passionate about programming for **10 years
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
 </div>
+
+## 🎮 Game Development Journey
+
+**Unity & C#** → Published mobile games on **Google Play Store**  
+**Godot Engine** → Created custom games for friends and community  
+**Minecraft Modding** → Developed projects using **Lua scripting**
 
 ## 🌟 Featured Projects
 
@@ -51,6 +63,22 @@ Deep learning model for astronomical object classification
 **🤖 Universal Data Processor**  
 Automated ML pipeline for CSV analysis  
 *Tech: Python, Pandas, Streamlit*
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**🎮 Unity Mobile Games**  
+Published games on Google Play Store  
+*Tech: Unity, C#, Android*
+
+</td>
+<td width="50%">
+
+**🎯 Godot Game Projects**  
+Custom games developed for community  
+*Tech: Godot Engine, GDScript*
 
 </td>
 </tr>
@@ -84,7 +112,7 @@ IoT and astronomical instruments
 
 ## 🤝 Let's Connect
 
-I'm passionate about **sharing knowledge** and **helping others** in their coding journey. Whether it's AI/ML, embedded systems, or general programming - I'm always open to collaborate and mentor.
+I'm passionate about **sharing knowledge** and **helping others** in their coding journey. Whether it's AI/ML, embedded systems, game development, or general programming - I'm always open to collaborate and mentor.
 
 <div align="center">
 
